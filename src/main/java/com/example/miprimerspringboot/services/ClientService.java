@@ -24,5 +24,8 @@ public class ClientService {
         return clientRepository.getById(id);
     }
 
+    public List<Client> getByEmail(String email, int i){
+        return clientRepository.getByEmail(email,i);
+    }
 
 }

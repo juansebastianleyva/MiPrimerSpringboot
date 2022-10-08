@@ -32,4 +32,9 @@ public class ClientController {
     public Optional<Client> getClient(@PathVariable("id") int clientId){
         return clientService.getById(clientId);
     }
+
+    @GetMapping("/search/{email}/{age}")
+    public List<Client> getByEmail(@PathVariable("email") String email,@PathVariable("age") int i){
+        return clientService.getByEmail(email,i);
+    }
 }

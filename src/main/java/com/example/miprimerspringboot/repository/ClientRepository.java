@@ -25,4 +25,8 @@ public class ClientRepository {
     public Optional<Client> getById(int id){
          return clientCRUDRepository.findById(id);
     }
+
+    public List<Client> getByEmail(String email,int i){
+        return clientCRUDRepository.findByEmailContainsAndAgeGreaterThan(email,i);
+    }
 }
